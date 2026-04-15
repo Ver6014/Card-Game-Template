@@ -31,7 +31,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Shuffle();
+        Deal();
     }
 
     // Update is called once per frame
@@ -46,13 +47,13 @@ public class GameManager : MonoBehaviour
         {
             Card top_card = Instantiate(blank, player_hand_pos, Quaternion.identity, canvas.transform);
 
-            player_hand_pos.x += 300;
+            player_hand_pos.x += 160;
 
             top_card.data = player_deck[0];
 
             player_hand.Add(top_card.data);
 
-           player_deck.RemoveAt(0);
+            player_deck.RemoveAt(0);
 
            /*
             player_deck.RemoveAt(0);
@@ -65,7 +66,16 @@ public class GameManager : MonoBehaviour
 
     void Shuffle()
     {
-
+        // Fisher-Yates shuffle algorithm for player deck
+        for (int i = player_deck.Count - 1; i > 0; i--)
+        {
+            int randomIndex = Random.Range(0, i + 1);
+            
+            // Swap
+            Card_data temp = player_deck[i];
+            player_deck[i] = player_deck[randomIndex];
+            player_deck[randomIndex] = temp;
+        }
     }
 
     void AI_Turn()
