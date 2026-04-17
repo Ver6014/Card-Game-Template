@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour
             ai_deck.RemoveAt(0);
             */
         }
-
     }
 
     void Shuffle()
@@ -81,9 +80,5 @@ public class GameManager : MonoBehaviour
     void AI_Turn()
     {
 
-    }
-
-
-
-    
+    }    
 }
