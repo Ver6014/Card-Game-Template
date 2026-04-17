@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public List<Card_data> deck = new List<Card_data>();
     public List<Card_data> player_deck = new List<Card_data>();
     public List<Card_data> ai_deck = new List<Card_data>();
-    public List<Card_data> player_hand = new List<Card_data>();
+    public List<Card> player_hand = new List<Card>();
     public List<Card_data> ai_hand = new List<Card_data>();
     public List<Card_data> discard_pile = new List<Card_data>();
 
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
 
             top_card.data = player_deck[0];
 
-            player_hand.Add(top_card.data);
+            player_hand.Add(top_card);
 
             player_deck.RemoveAt(0);
 
