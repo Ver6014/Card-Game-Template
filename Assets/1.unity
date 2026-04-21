@@ -313,19 +313,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee8c48878610400591dbc552a9c8d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  deck: []
+  deck:
+  - {fileID: 11400000, guid: c53dbcc4ced1c497e85a2a86a4ee6ca9, type: 2}
+  - {fileID: 11400000, guid: a257e0cd65e1a421488348a643806595, type: 2}
+  - {fileID: 11400000, guid: f3dc9c05dda5b45f3ac79f707f7c10a8, type: 2}
+  - {fileID: 11400000, guid: 86268e25a67e54e3481f9210e37a883c, type: 2}
+  - {fileID: 11400000, guid: 49b2843d1f56540aea2972a79796a6a8, type: 2}
   player_deck:
   - {fileID: 11400000, guid: c53dbcc4ced1c497e85a2a86a4ee6ca9, type: 2}
   - {fileID: 11400000, guid: a257e0cd65e1a421488348a643806595, type: 2}
   - {fileID: 11400000, guid: f3dc9c05dda5b45f3ac79f707f7c10a8, type: 2}
   - {fileID: 11400000, guid: 86268e25a67e54e3481f9210e37a883c, type: 2}
   - {fileID: 11400000, guid: 49b2843d1f56540aea2972a79796a6a8, type: 2}
-  ai_deck: []
+  ai_deck:
+  - {fileID: 11400000, guid: c53dbcc4ced1c497e85a2a86a4ee6ca9, type: 2}
+  - {fileID: 11400000, guid: a257e0cd65e1a421488348a643806595, type: 2}
+  - {fileID: 11400000, guid: f3dc9c05dda5b45f3ac79f707f7c10a8, type: 2}
+  - {fileID: 11400000, guid: 86268e25a67e54e3481f9210e37a883c, type: 2}
+  - {fileID: 11400000, guid: 49b2843d1f56540aea2972a79796a6a8, type: 2}
   player_hand: []
   ai_hand: []
   discard_pile: []
   canvas: {fileID: 1328838463}
   player_hand_pos: {x: -400, y: 0, z: 0}
+  ai_hand_pos: {x: 0, y: 0, z: 0}
   blank: {fileID: 4608709814338197990, guid: 99ef4bccd68e84d9ba6e7c8051daf70b, type: 3}
 --- !u!1 &1616338989
 GameObject:
