@@ -319,18 +319,24 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f3dc9c05dda5b45f3ac79f707f7c10a8, type: 2}
   - {fileID: 11400000, guid: 86268e25a67e54e3481f9210e37a883c, type: 2}
   - {fileID: 11400000, guid: 49b2843d1f56540aea2972a79796a6a8, type: 2}
+  - {fileID: 11400000, guid: 349f4fbdc29d0416d8bb89fd091eab43, type: 2}
+  - {fileID: 11400000, guid: c6107974a9aab4dccbccde62f811e758, type: 2}
   player_deck:
   - {fileID: 11400000, guid: c53dbcc4ced1c497e85a2a86a4ee6ca9, type: 2}
   - {fileID: 11400000, guid: a257e0cd65e1a421488348a643806595, type: 2}
   - {fileID: 11400000, guid: f3dc9c05dda5b45f3ac79f707f7c10a8, type: 2}
   - {fileID: 11400000, guid: 86268e25a67e54e3481f9210e37a883c, type: 2}
   - {fileID: 11400000, guid: 49b2843d1f56540aea2972a79796a6a8, type: 2}
+  - {fileID: 11400000, guid: 349f4fbdc29d0416d8bb89fd091eab43, type: 2}
+  - {fileID: 11400000, guid: c6107974a9aab4dccbccde62f811e758, type: 2}
   ai_deck:
   - {fileID: 11400000, guid: c53dbcc4ced1c497e85a2a86a4ee6ca9, type: 2}
   - {fileID: 11400000, guid: a257e0cd65e1a421488348a643806595, type: 2}
   - {fileID: 11400000, guid: f3dc9c05dda5b45f3ac79f707f7c10a8, type: 2}
   - {fileID: 11400000, guid: 86268e25a67e54e3481f9210e37a883c, type: 2}
   - {fileID: 11400000, guid: 49b2843d1f56540aea2972a79796a6a8, type: 2}
+  - {fileID: 11400000, guid: 349f4fbdc29d0416d8bb89fd091eab43, type: 2}
+  - {fileID: 11400000, guid: c6107974a9aab4dccbccde62f811e758, type: 2}
   player_hand: []
   ai_hand: []
   discard_pile: []
