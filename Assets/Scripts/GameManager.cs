@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         else
         {
             gm = this;
+            
             DontDestroyOnLoad(this.gameObject);
         }
     }
@@ -33,12 +34,15 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         player_hand_pos.x += 165;
+        
         ai_hand_pos.x = player_hand_pos.x;
+        
         ai_hand_pos.y = player_hand_pos.y + 150;
+        
         Shuffle();
+        
         Deal();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -59,15 +63,7 @@ public class GameManager : MonoBehaviour
             player_hand.Add(top_card);
 
             player_deck.RemoveAt(0);
-
-           /*
-            player_deck.RemoveAt(0);
-            ai_hand.Add(ai_deck[0]);
-            ai_deck.RemoveAt(0);
-            */
         }
-
-        //card_to_player_hand();
         ai_deal();
     }
 
@@ -78,10 +74,11 @@ public class GameManager : MonoBehaviour
         for (int i = player_deck.Count - 1; i > 0; i--)
         {
             int randomIndex = Random.Range(0, i + 1);
-            
             // Swap
             Card_data temp = player_deck[i];
+           
             player_deck[i] = player_deck[randomIndex];
+           
             player_deck[randomIndex] = temp;
         }
     }
@@ -100,13 +97,13 @@ public class GameManager : MonoBehaviour
 
             ai_hand_pos.x += 100;
            
-
             ai_top_card.data = ai_deck[0];
 
             ai_hand.Add(ai_top_card);
+            
             ai_deck.RemoveAt(0);
 
-           /*
+            /*
             player_deck.RemoveAt(0);
             ai_hand.Add(ai_deck[0]);
             ai_deck.RemoveAt(0);
@@ -118,16 +115,16 @@ public class GameManager : MonoBehaviour
     {
         int randomIndex = Random.Range(0, deck.Count);
 
-       Card deck_top_card = Instantiate(blank, player_hand_pos, Quaternion.identity, canvas.transform);
+        Card deck_top_card = Instantiate(blank, player_hand_pos, Quaternion.identity, canvas.transform);
        
         player_hand_pos.x += 100;
 
         deck_top_card.data = deck[randomIndex]; 
 
         deck.RemoveAt(randomIndex);
+        
         player_hand.Add(deck_top_card);
 
         Deal();
-        
     }   
 }
