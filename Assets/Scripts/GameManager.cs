@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     public List<Card> player_hand = new List<Card>();
     public List<Card> ai_hand = new List<Card>();
     public List<Card_data> discard_pile = new List<Card_data>();
-
     public Canvas canvas;
     public Vector3 player_hand_pos;
     public Vector3 ai_hand_pos;
@@ -126,5 +125,9 @@ public class GameManager : MonoBehaviour
         player_hand.Add(deck_top_card);
 
         Deal();
-    }   
+    } 
+     void Play()
+    {
+         Card player_card = player_hand[0];
+    }     
 }
