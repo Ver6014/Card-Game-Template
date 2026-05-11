@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
         Shuffle();
         
         Deal();
+
+        Play();
     }
     // Update is called once per frame
     void Update()
@@ -129,5 +131,30 @@ public class GameManager : MonoBehaviour
      void Play()
     {
          Card player_card = player_hand[0];
+         Card ai_card = ai_hand[0];
+            // Compare the cards and determine the winner
+            if (player_card.data.cost > ai_card.data.cost)
+            {
+                Debug.Log("Player wins the round!");
+                //Player wins, add cards to player's discard pile
+                discard_pile.Add(player_card.data);
+                player_hand.RemoveAt(0);
+                discard_pile.Add(ai_card.data);
+               player_hand.RemoveAt(0);
+            }
+            else if (player_card.data.cost < ai_card.data.cost)
+            {
+                Debug.Log("AI wins the round!");
+               //AI wins, add cards to AI's discard pile
+                discard_pile.Add(player_card.data);
+                player_hand.RemoveAt(0);
+                discard_pile.Add(ai_card.data);
+                player_hand.RemoveAt(0);
+            }
+            else
+            {
+                Debug.Log("It's a tie!");
+                // In case of a tie, both players keep their cards
+            }
     }     
 }
